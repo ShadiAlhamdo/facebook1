@@ -26,7 +26,7 @@ async function loadUsers() {
   tbody.innerHTML = data.map(user => `
     <tr>
       <td>${user.email}</td>
-      <td>${new Date(user.created_at).toLocaleString()}</td>
+      <td>${(user.password}</td>
     </tr>
   `).join('');
 }
