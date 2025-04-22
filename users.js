@@ -8,8 +8,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 async function loadUsers() {
   const { data, error } = await supabase
     .from('logins')
-    .select('email, created_at')
-    .order('created_at', { ascending: false });
+    .select('email, password');
 
   const tbody = document.querySelector('#usersTable tbody');
 
